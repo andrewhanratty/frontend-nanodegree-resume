@@ -11,7 +11,12 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.text-thin {
+  font-weight: 300;
 }
 
 .clear-fix {
@@ -26,8 +31,9 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #E74C3C;
   line-height: 48px;
+  padding-right: 15px;
   display: inline;
 }
 
@@ -42,13 +48,13 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #7fb0ff;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   color: #4a4a4a;
   line-height: 17px;
 }
@@ -61,6 +67,12 @@ h5 {
 
 }
 
+.online-courses {
+  font-size: 20px;
+  line-height: 22px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
 
 .date-text {
   font-style: italic;
@@ -71,12 +83,11 @@ h5 {
 }
 
 .location-text {
-  font-style: italic;
+  font-style: normal;
   font-size: 14px;
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -88,7 +99,7 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 0px;
   display: block;
 }
 
@@ -100,21 +111,25 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #95A5A6;
   display: none;
 }
 
+.role {
+  color: #95A5A6;
+}
+
 .orange {
-  background-color: #f5ae23;
+  background-color: #34495E;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #95A5A6;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #E74C3C;
 }
 
 .gray {
@@ -124,12 +139,12 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #95A5A6;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #34495E;
 }
 
 .flex-box {
@@ -153,8 +168,10 @@ a {
 }
 
 ul {
+  display: block;
   list-style-type: none;
 }
+
 
 .biopic {
   float: left;
@@ -199,6 +216,9 @@ span {
   .welcome-message {
     display: none;
   }
+  .skillset {
+    display: none;
+  }
 }
 
 #map {
@@ -217,5 +237,18 @@ span {
   #skills-h3,
   .biopic {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .name {
+    text-align: center;
+  }
+  .role {
+    display: inline-flex;
+    text-align: center;
+  }
+  .footerContacts {
+    text-align: center;
   }
 }
