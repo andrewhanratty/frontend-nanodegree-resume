@@ -23,6 +23,11 @@ h6 {
   overflow: auto;
 }
 
+#topContacts {
+  display: flex;
+  text-align:center;
+}
+
 .education-entry,
 .work-entry,
 .project-entry {
@@ -144,7 +149,9 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #34495E;
+  background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboyblob.jpg) no-repeat;
+  background-size: cover;
+  padding-bottom: 200px;
 }
 
 .flex-box {
