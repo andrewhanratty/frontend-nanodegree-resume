@@ -125,7 +125,7 @@ a {
 }
 
 .orange {
-  background-color: #34495E;
+  background-color: black;
 }
 
 .orange-text {
@@ -144,14 +144,43 @@ a {
 }
 
 .dark-gray {
-  background-color: #95A5A6;
+  background-color: #f3f3f3;
 }
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.8s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
 
 /* TODO: Replace with image later */
 #header {
   background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboyblob.jpg) no-repeat;
-  background-size: cover;
-  padding-bottom: 200px;
+  background-size:contain;
+  background-position:center;
+  padding-bottom: 17%;
 }
 
 .flex-box {
@@ -247,7 +276,54 @@ span {
   }
 }
 
-@media only screen and (max-width: 428px) {
+@media screen and (max-width:920px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:920px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  #topContacts {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall2.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+    padding-bottom: 40%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #header {
+    background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall5.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+    padding-bottom: 42%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
   .name {
     text-align: center;
   }
