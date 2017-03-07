@@ -9,142 +9,153 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
 }
 
 .text-thin {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .clear-fix {
-  overflow: auto;
+    overflow: auto;
 }
 
 #topContacts {
-  display: flex;
-  text-align:center;
+    display: flex;
+    text-align: center;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+    padding: 0 5%;
+}
+
+.project-entry {
+    padding-bottom: 10px;
 }
 
 h1 {
-  font-size: 40px;
-  color: #E74C3C;
-  line-height: 48px;
-  padding-right: 15px;
-  display: inline;
+    font-size: 40px;
+    color: #E74C3C;
+    line-height: 48px;
+    padding-right: 15px;
+    display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #999;
+    line-height: 29px;
+    padding: 10px;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #7fb0ff;
-  line-height: 22px;
+    font-style: italic;
+    font-size: 20px;
+    color: #7fb0ff;
+    line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 20px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding: 10px 5%;
-
+    padding: 10px 5%;
 }
 
 .online-courses {
-  font-size: 20px;
-  line-height: 22px;
-  padding-top: 20px;
-  padding-bottom: 15px;
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: left;
 }
 
 .location-text {
-  font-style: normal;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
+    font-style: normal;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
 }
 
 a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 0px;
-  display: block;
+    color: #1199c3;
+    text-decoration: none;
+    margin-top: 0px;
+    display: block;
 }
 
-.welcome-message {
+/*.welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
-}
+}*/
 
 #skills-h3 {
-  color: #95A5A6;
-  display: none;
+    color: #95A5A6;
+    opacity: 0;
+    padding-left: 0px;
+}
+
+.skillset {
+    color: #E74C3C;
+    opacity: 0;
 }
 
 .role {
-  color: #95A5A6;
+    color: #95A5A6;
 }
 
 .orange {
-  background-color: black;
+    background-color: black;
 }
 
 .orange-text {
-  color: #95A5A6;
+    color: #95A5A6;
+    opacity: 0;
 }
 
 .white-text {
-  font-weight: bold;
-  color: #E74C3C;
+    font-weight: bold;
+    color: #E74C3C;
+    opacity: 0;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear: both;
+    background-color: #f3f3f3;
+    padding-bottom: 10px;
+    clear: both;
 }
 
 .dark-gray {
-  background-color: #f3f3f3;
+    background-color: #f3f3f3;
 }
 
 ul.topnav {
@@ -156,7 +167,9 @@ ul.topnav {
 }
 
 /* Float the list items side by side */
-ul.topnav li {float: left;}
+ul.topnav li {
+    float: left;
+}
 
 /* Style the links inside the list items */
 ul.topnav li a {
@@ -170,168 +183,203 @@ ul.topnav li a {
 }
 
 /* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #555;}
+ul.topnav li a:hover {
+    background-color: #555;
+}
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;}
+ul.topnav li.icon {
+    display: none;
+}
 
 /* TODO: Replace with image later */
 #header {
-  background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboyblob.jpg) no-repeat;
-  background-size:contain;
-  background-position:center;
-  padding-bottom: 17%;
+    background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboyblob.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    padding-bottom: 5%;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0px;
+}
+
+.education-entry {
+    padding-bottom: 10px;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+    padding: 2.5% 5%;
+}
+
+#films {
+    display: inline-flex;
 }
 
 ul {
-  display: block;
-  list-style-type: none;
+    display: block;
+    list-style-type: none;
 }
 
 
-.biopic {
+/*.biopic {
   float: left;
   padding: 10px;
   width: 200px;
   display: none;
-}
+}*/
 
 img {
-  padding: 10px;
+    padding: 10px;
 }
 
 span {
-  padding: 5px;
+    padding: 5px;
 }
 
 #lets-connect {
-  text-align: center;
+    text-align: center;
 }
+
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+@media only screen and (max-width: 1093px) {
+    #films {
+        display: block;
+    };
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 1024px) {
+    #lets-connect {
+        margin-top: 5%;
+    };
+}
+
+/*@media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
-}
+}*/
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
+    #lets-connect {
+        margin-top: 10%;
+    }
+  /*.biopic {
     width: 150px;
-  }
-  .welcome-message {
+  }*/
+  /*.welcome-message {
     display: none;
-  }
-  .skillset {
-    display: none;
-  }
+  }*/
+    .skillset {
+        display: none;
+    };
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
+/*@media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
   }
-}
+}*/
 
 @media screen and (max-width:920px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-  }
+    ul.topnav li:not(:first-child) {
+        display: none;
+    }
+
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    };
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:920px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
-  #topContacts {
-    display: none;
-  }
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ul.topnav.responsive li {
+        float: none;
+        display: inline;
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+
+    #topContacts {
+        display: none;
+    }
+
+    #skills-h3 {
+        display: none;
+    };
 }
 
-@media screen and (max-width: 767px) {
-  #header {
-    background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall2.jpg) no-repeat;
-    background-size:cover;
-    background-position:center;
-    padding-bottom: 40%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  #header {
-    background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall5.jpg) no-repeat;
-    background-size:cover;
-    background-position:center;
-    padding-bottom: 42%;
-  }
+@media screen and (max-width: 765px) {
+    #header {
+        background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 40%;
+    };
 }
 
 @media only screen and (max-width: 650px) {
-  .name {
-    text-align: center;
-  }
-  .role {
-    display: inline-flex;
-    text-align: center;
-  }
-  .footerContacts {
-    text-align: center;
-  }
+    .name {
+        text-align: center;
+    }
+
+    .role {
+        display: inline-flex;
+        text-align: center;
+    }
+
+    .footerContacts {
+        text-align: center;
+    };
+}
+
+@media screen and (max-width: 450px) {
+    #header {
+        background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall5.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding-bottom: 42%;
+    };
 }
