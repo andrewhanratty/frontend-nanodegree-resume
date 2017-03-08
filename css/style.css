@@ -227,6 +227,7 @@ ul.topnav li.icon {
 
 #films {
     display: inline-flex;
+    align-content: center;
 }
 
 ul {
