@@ -116,6 +116,7 @@ bio.display = function() {
     var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLocation);
+
     //Causes contact info to appear on screen when 'Contact' menu button is moused over.
     $('.contactMe').mouseenter(function() {
         $('.orange-text').css('opacity', '1');
@@ -135,14 +136,14 @@ bio.display = function() {
         $('#skills-h3').css('opacity', '1');
         $('.skillset').css('opacity', '1');
         $('#skills-h3').css('transition-duration', '.5s');
-        $('#skillset').css('transition-duration', '.5s');
+        $('.skillset').css('transition-duration', '.5s');
     });
     //Causes skills to disappear from screen when the mouse leaves 'Skills' menu button.
     $('.mySkills').mouseleave(function() {
         $('#skills-h3').css('opacity', '0');
         $('.skillset').css('opacity', '0');
         $('#skills-h3').css('transition-duration', '.5s');
-        $('#skillset').css('transition-duration', '.5s');
+        $('.skillset').css('transition-duration', '.5s');
     });
     //var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
     //$("#header").append(formattedBioPic);
