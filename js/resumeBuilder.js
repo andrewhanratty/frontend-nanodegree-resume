@@ -1,9 +1,3 @@
-var formattedName = HTMLheaderName.replace("%data%", "Drew Hanratty");
-$("#header").append(formattedName);
-
-var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
-$("#header").append(formattedRole);
-
 var bio = {
     "name": "Drew Hanratty",
     "role": "Web Developer",
@@ -69,17 +63,17 @@ var projects = {
         "title": "Nezha",
         "dates": "June 2015 to July 2015",
         "description": "Composed the score for this feature film by Li Xiaofeng.",
-        "images": "images/nezhaPoster2.jpg"
+        "images": ["images/nezhaPoster2.jpg"]
     }, {
         "title": "Romance Out of the Blue",
         "dates": "May 2015 to June 2015",
         "description": "Composed the score for this romantic comedy by Ning Ying.",
-        "images": "images/Romance_Out_of_the_Blue_poster (1).jpg"
+        "images": ["images/Romance_Out_of_the_Blue_poster (1).jpg"]
     }, {
         "title": "Neo-Lounge",
         "dates": "September 2014 to October 2014",
         "description": "Composed the score for this feature-length documentary by Joanna Arong.",
-        "images": "images/neoLounge1.jpg"
+        "images": ["images/neoLounge1.jpg"]
     }]
 };
 
@@ -88,18 +82,18 @@ var education = {
             "name": "University of Kentucky",
             "location": "Lexington Ky",
             "degree": "BA (summa cum laude)",
-            "major": "Psychology",
+            "majors": ["Psychology"],
             "dates": "August 1991 to August 1995"
         },
         {
             "name": "International House",
             "location": "Prague, Czech Republic",
             "degree": "Cambridge/RSA CELTA",
-            "major": "TESL certification",
+            "majors": ["TESL certification"],
             "dates": "May 2001 to June 2001"
         }
     ],
-    "onlineCourse": [{
+    "onlineCourses": [{
         "title": "Front-end Web Developer",
         "school": "Udacity",
         "dates": "January 2017 to May 2017",
@@ -107,69 +101,60 @@ var education = {
     }]
 };
 
-$('#topContacts').insertAfter('hr');
 
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").append(formattedMobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedEmail);
-var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(formattedGitHub);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").append(formattedLocation);
+bio.display = function() {
+    var formattedName = HTMLheaderName.replace("%data%", "Drew Hanratty");
+    $("#header").append(formattedName);
+    var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
+    $("#header").append(formattedRole);
 
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#footerContacts").append(formattedMobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#footerContacts").append(formattedEmail);
-var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#footerContacts").append(formattedGitHub);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#footerContacts").append(formattedLocation);
+    //Places the contact info after the horizontal rule
+    $('#topContacts').insertAfter('hr');
 
-$('.contactMe').mouseenter(function() {
-    $('.orange-text').css('opacity', '1');
-    $('.white-text').css('opacity', '1');
-    $('.orange-text').css('transition-duration', '.5s');
-    $('.white-text').css('transition-duration', '.5s');
-});
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
+    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLocation);
+    //Causes contact info to appear on screen when 'Contact' menu button is moused over.
+    $('.contactMe').mouseenter(function() {
+        $('.orange-text').css('opacity', '1');
+        $('.white-text').css('opacity', '1');
+        $('.orange-text').css('transition-duration', '.5s');
+        $('.white-text').css('transition-duration', '.5s');
+    });
+    //Causes the contact info to disappear from the screen when the mouse leaves 'Contact' menu butoon.
+    $('.contactMe').mouseleave(function() {
+        $('.orange-text').css('opacity', '0');
+        $('.white-text').css('opacity', '0');
+        $('.orange-text').css('transition-duration', '.5s');
+        $('.white-text').css('transition-duration', '.5s');
+    });
+    //Causes skills to appear on screen when 'Skills' menut button is moused over.
+    $('.mySkills').mouseenter(function() {
+        $('#skills-h3').css('opacity', '1');
+        $('.skillset').css('opacity', '1');
+        $('#skills-h3').css('transition-duration', '.5s');
+        $('#skillset').css('transition-duration', '.5s');
+    });
+    //Causes skills to disappear from screen when the mouse leaves 'Skills' menu button.
+    $('.mySkills').mouseleave(function() {
+        $('#skills-h3').css('opacity', '0');
+        $('.skillset').css('opacity', '0');
+        $('#skills-h3').css('transition-duration', '.5s');
+        $('#skillset').css('transition-duration', '.5s');
+    });
+    //var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+    //$("#header").append(formattedBioPic);
+    bio.skills.forEach(function(skill) {
+        $("#header").append(HTMLskillsStart);
+        var formattedSkill = HTMLskills.replace("%data%", skill);
+        $("#skills").append(formattedSkill);
+    });
+};
 
-$('.contactMe').mouseleave(function() {
-    $('.orange-text').css('opacity', '0');
-    $('.white-text').css('opacity', '0');
-    $('.orange-text').css('transition-duration', '.5s');
-    $('.white-text').css('transition-duration', '.5s');
-});
+bio.display();
 
-$('.mySkills').mouseenter(function() {
-    $('#skills-h3').css('opacity', '1');
-    $('.skillset').css('opacity', '1');
-    $('#skills-h3').css('transition-duration', '.5s');
-    $('#skillset').css('transition-duration', '.5s');
-});
-
-$('.mySkills').mouseleave(function() {
-    $('#skills-h3').css('opacity', '0');
-    $('.skillset').css('opacity', '0');
-    $('#skills-h3').css('transition-duration', '.5s');
-    $('#skillset').css('transition-duration', '.5s');
-});
-
-//var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-//$("#header").append(formattedBioPic);
-
-if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillsStart);
-
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    $("#skills").append(formattedSkill);
-}
 
 work.display = function() {
     work.jobs.forEach(function(job) {
@@ -193,6 +178,7 @@ work.display = function() {
 
 work.display();
 
+
 projects.display = function() {
     projects.projects.forEach(function(project) {
         $("#films").append(HTMLprojectStart);
@@ -206,12 +192,15 @@ projects.display = function() {
         var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
         $(".project-entry:last").append(formattedDescription);
 
-        var formattedImage = HTMLprojectImage.replace("%data%", project.images);
-        $(".project-entry:last").append(formattedImage);
+        for (image = 0; image < project.images.length; image++) {
+            var formattedImage = HTMLprojectImage.replace("%data%", project.images);
+            $(".project-entry:last").append(formattedImage);
+        }
     });
 };
 
 projects.display();
+
 
 education.display = function() {
     for (school = 0; school < education.schools.length; school++) {
@@ -229,30 +218,31 @@ education.display = function() {
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
         $(".education-entry:last").append(formattedDegree);
 
-        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
         $(".education-entry:last").append(formattedMajor);
     }
 
-    $(".education-entry:last").append(HTMLonlineClasses);
+    for (i = 0; i < education.onlineCourses.length; i++) {
+        $(".education-entry:last").append(HTMLonlineClasses);
 
-    for (i = 0; i < education.onlineCourse.length; i++) {
-
-        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[i].school);
+        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
         $(".education-entry:last").append(formattedOnlineSchool);
 
-        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourse[i].dates);
+        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
         $(".education-entry:last").append(formattedOnlineDates);
 
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourse[i].title);
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
         $(".education-entry:last").append(formattedOnlineTitle);
 
-        var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourse[i].url);
+        var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
         $(".education-entry:last").append(formattedOnlineURL);
     }
 };
 
 education.display();
 
+
+//I have no idea why this is here or how it's useful to me.
 $(document).click(function(loc) {
     var x = loc.pageX;
     var y = loc.pageY;
@@ -260,6 +250,8 @@ $(document).click(function(loc) {
     logClicks(x, y);
 });
 
+
+//Creates a button that makes all of my surname uppercase
 $("#main").append(internationalizeButton);
 
 function inName(string) {
@@ -267,8 +259,12 @@ function inName(string) {
     return internationalName[0] + " " + internationalName[1].toUpperCase();
 }
 
+
+//Puts googleMaps on the page.
 $("#mapDiv").append(googleMap);
 
+
+//Assists in the operation of the nav menu.
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
