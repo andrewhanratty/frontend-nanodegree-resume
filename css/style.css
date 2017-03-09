@@ -195,7 +195,7 @@ ul.topnav li.icon {
 /* TODO: Replace with image later */
 #header {
     background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboyblob.jpg) no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-color: white;
     padding-bottom: 5%;
@@ -226,7 +226,7 @@ ul.topnav li.icon {
 }
 
 #films {
-    display: inline-flex;
+    display: flex;
     align-content: center;
 }
 
@@ -243,8 +243,9 @@ ul {
   display: none;
 }*/
 
-img {
-    padding: 10px;
+img.img-pad {
+    padding-left: 0px;
+    padding-top: 10px;
 }
 
 span {
@@ -349,6 +350,15 @@ span {
 
     #skills-h3 {
         display: none;
+    }
+}
+
+@media screen and (min-width: 766px) and (max-width: 920px) {
+    #header {
+        background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboyblob.jpg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding-bottom: 10%;
     };
 }
 
@@ -381,6 +391,6 @@ span {
         background: transparent url(file:///Users/andrewhanratty/resume-copy/frontend-nanodegree-resume/images/Cinerama6cowboysmall5.jpg) no-repeat;
         background-size: contain;
         background-position: center;
-        padding-bottom: 42%;
+        padding-bottom: 50%;
     };
 }
