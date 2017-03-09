@@ -129,6 +129,10 @@ a {
     opacity: 0;
 }
 
+#footerContacts {
+  opacity: 1;
+}
+
 .role {
     color: #95A5A6;
 }
