@@ -93,12 +93,12 @@ var education = {
             "dates": "May 2001 to June 2001"
         }
     ],
-    "onlineCourses": [{
+    "onlineCourses": {
         "title": "Front-end Web Developer",
         "school": "Udacity",
         "dates": "January 2017 to May 2017",
         "url": "https://www.udacity.com"
-    }]
+    }
 };
 
 
@@ -118,32 +118,35 @@ bio.display = function() {
     $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedLocation);
 
     //Causes contact info to appear on screen when 'Contact' menu button is moused over.
+    $('#header .orange-text').css('opacity', '0');
+    $('#header .white-text').css('opacity', '0');
+
     $('.contactMe').mouseenter(function() {
-        $('.orange-text').css('opacity', '1');
-        $('.white-text').css('opacity', '1');
-        $('.orange-text').css('transition-duration', '.5s');
-        $('.white-text').css('transition-duration', '.5s');
+        $('#header .orange-text').css('opacity', '1');
+        $('#header .white-text').css('opacity', '1');
+        $('#header .orange-text').css('transition-duration', '.5s');
+        $('#header .white-text').css('transition-duration', '.5s');
     });
     //Causes the contact info to disappear from the screen when the mouse leaves 'Contact' menu butoon.
     $('.contactMe').mouseleave(function() {
-        $('.orange-text').css('opacity', '0');
-        $('.white-text').css('opacity', '0');
-        $('.orange-text').css('transition-duration', '.5s');
-        $('.white-text').css('transition-duration', '.5s');
+        $('#header .orange-text').css('opacity', '0');
+        $('#header .white-text').css('opacity', '0');
+        $('#header .orange-text').css('transition-duration', '.5s');
+        $('#header .white-text').css('transition-duration', '.5s');
     });
     //Causes skills to appear on screen when 'Skills' menut button is moused over.
     $('.mySkills').mouseenter(function() {
         $('#skills-h3').css('opacity', '1');
-        $('.skillset').css('opacity', '1');
+        $('#header .skillset').css('opacity', '1');
         $('#skills-h3').css('transition-duration', '.5s');
-        $('.skillset').css('transition-duration', '.5s');
+        $('#header .skillset').css('transition-duration', '.5s');
     });
     //Causes skills to disappear from screen when the mouse leaves 'Skills' menu button.
     $('.mySkills').mouseleave(function() {
         $('#skills-h3').css('opacity', '0');
-        $('.skillset').css('opacity', '0');
+        $('#header .skillset').css('opacity', '0');
         $('#skills-h3').css('transition-duration', '.5s');
-        $('.skillset').css('transition-duration', '.5s');
+        $('#header .skillset').css('transition-duration', '.5s');
     });
     //var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
     //$("#header").append(formattedBioPic);
